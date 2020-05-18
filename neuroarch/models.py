@@ -205,12 +205,10 @@ class Neuron(BioNode):
     synonyms = EmbeddedList(linked_to=String(), nullable=True, unique=False, indexed=True)
     referenceId = String(nullable=True, unique=False, indexed=True)
     info = EmbeddedMap(nullable=True, unique=False, indexed=True)
-
-class L1EMNeuron(Neuron):
     # annotation from CATMAID server
     annotation = EmbeddedList(linked_to=String(), nullable=True, unique=False, indexed=True)
     # publication linked to the neuron
-    source = EmbeddedList(linked_to=String(), nullable=True, unique=False, indexed=True)
+    source = EmbeddedList(linked_to=String(), nullable=True, unique=False, indexed=True)    
 
 class NeuronTerminal(BioNode):
     element_type = 'NeuronTerminal'
